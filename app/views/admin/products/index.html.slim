@@ -1,0 +1,29 @@
+= link_to 'Categories', admin_categories_path
+
+h1 Listing products
+
+table
+  thead
+    tr
+      th Title
+      th Description
+      th Image name
+      th Price
+      th
+      th
+      th
+
+  tbody
+    - @products.each do |product|
+      tr
+        td = product.title
+        td = product.description
+        td = product.image_name
+        td = product.price
+        td = link_to 'Show', admin_product_path(product)
+        td = link_to 'Edit', edit_admin_product_path(product)
+        td = link_to 'Destroy', admin_product_path(product), data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Product', new_admin_product_path
