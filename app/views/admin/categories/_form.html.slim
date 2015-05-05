@@ -11,5 +11,5 @@
     = f.text_field :title
   .field
     = f.label :parent_id
-    = f.number_field :parent_id
+    = f.select "parent_id", object.collect { |c| [c.title, c.id] }, :selected => @category.parent_id, :include_blank => "No parent"
   .actions = f.submit
