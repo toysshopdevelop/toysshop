@@ -37,6 +37,8 @@ gem 'bcrypt'
 
 gem 'pry'
 
+gem 'rails-i18n', '~> 4.0.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
