@@ -1,6 +1,6 @@
 h1 Editing category
 
-== render 'form', object: @categories
+== render 'form', locals: { categories: @categories }
 
 = link_to 'Show', [:admin, @category]
 '|

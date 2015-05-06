@@ -31,7 +31,11 @@ gem 'autoprefixer-rails'
 
 gem 'slim-rails'
 
+gem 'simple_form'
+
 gem 'bcrypt'
+
+gem 'pry'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

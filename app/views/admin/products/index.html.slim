@@ -6,6 +6,7 @@ table
   thead
     tr
       th Title
+      th Category
       th Description
       th Image name
       th Price
@@ -17,6 +18,7 @@ table
     - @products.each do |product|
       tr
         td = product.title
+        td = product.category ? product.category.title : ''
         td = product.description
         td = product.image_name
         td = product.price
