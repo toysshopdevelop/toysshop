@@ -5,9 +5,7 @@ h1 Listing categories
 table
   thead
     tr
-      th ID
       th Title
-      th Parent ID
       th
       th
       th
@@ -15,9 +13,7 @@ table
   tbody
     - @categories.each do |category|
       tr
-        td = category.id
         td = category.title
-        td = category.parent_id
         td = link_to 'Show', admin_category_path(category)
         td = link_to 'Edit', edit_admin_category_path(category)
         td = link_to 'Destroy', admin_category_path(category), data: {:confirm => 'Are you sure?'}, :method => :delete

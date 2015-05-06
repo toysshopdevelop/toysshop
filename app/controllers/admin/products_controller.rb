@@ -16,6 +16,7 @@ class Admin::ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    @categories = Category.includes(:category) #all.map{ |c| [c.title, c.id] }
   end
 
   # GET /products/1/edit
@@ -43,7 +44,7 @@ class Admin::ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to [:admin, @product], notice: 'Product was successfully updated.' }
+        format.html { redirect_to admin_products_path, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
@@ -70,7 +71,7 @@ class Admin::ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :description, :image_name, :price)
+      params.require(:product).permit(:title, :description, :image_name, :price, :category_id)
     end
 
   protected
