@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: toys-shop
+  api_key: '373219983499144'
+  api_secret: SdUhKy18G-57QdlW6r593Rpy4bU
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: toys-shop
+  api_key: '373219983499144'
+  api_secret: SdUhKy18G-57QdlW6r593Rpy4bU
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: toys-shop
+  api_key: '373219983499144'
+  api_secret: SdUhKy18G-57QdlW6r593Rpy4bU
+  enhance_image_tag: true
+  static_image_support: false

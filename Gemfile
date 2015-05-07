@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'fog'
 
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'

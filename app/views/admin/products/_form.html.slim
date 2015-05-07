@@ -14,4 +14,6 @@
     = f.input :price
   .field
     = f.association :category, include_blank: false
+  .field
+    = f.file_field :image_name
   .actions = f.button :submit

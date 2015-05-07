@@ -5,10 +5,10 @@ h1 Listing products
 table
   thead
     tr
+      th Image
       th Title
       th Category
       th Description
-      th Image name
       th Price
       th
       th
@@ -17,11 +17,11 @@ table
   tbody
     - @products.each do |product|
       tr
+        td = image_tag(product.image_name_url(:thumb), alt: product.title)
         td = product.title
         td = product.category ? product.category.title : ''
         td = product.description
-        td = product.image_name
-        td = product.price
+        td = sprintf("$%0.02f", product.price)
         td = link_to 'Show', admin_product_path(product)
         td = link_to 'Edit', edit_admin_product_path(product)
         td = link_to 'Destroy', admin_product_path(product), data: {:confirm => 'Are you sure?'}, :method => :delete

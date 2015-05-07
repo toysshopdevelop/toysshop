@@ -8,7 +8,7 @@ p
   = @product.description
 p
   strong Image name:
-  = @product.image_name
+  = image_tag(@product.image_name_url, alt: @product.title)
 p
   strong Price:
   = @product.price
