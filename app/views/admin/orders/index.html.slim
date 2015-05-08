@@ -1,0 +1,18 @@
+h1 Listing orders
+
+- unless @orders.empty?
+  table
+    thead
+      tr
+        th
+        th
+        th
+
+    tbody
+      - @orders.each do |order|
+        tr
+          td = link_to 'Show', order
+          td = link_to 'Edit', edit_admin_order_path(order)
+          td = link_to 'Destroy', order, data: {:confirm => 'Are you sure?'}, :method => :delete
+- else
+  h2 No new orders

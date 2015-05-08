@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddCategoryRefToProducts	db/migrate/20150505103309_add_category_ref_to_products.rb	/^class AddCategoryRefToProducts < ActiveRecord::Migration$/;"	c
+Admin	app/controllers/admin/categories_controller.rb	/^class Admin::CategoriesController < ApplicationController$/;"	c
+Admin	app/controllers/admin/products_controller.rb	/^class Admin::ProductsController < ApplicationController$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Toysshop
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+CategoriesControllerTest	test/controllers/categories_controller_test.rb	/^class CategoriesControllerTest < ActionController::TestCase$/;"	c
+CategoriesHelper	app/helpers/categories_helper.rb	/^module CategoriesHelper$/;"	m
+Category	app/models/category.rb	/^class Category < ActiveRecord::Base$/;"	c
+CategoryTest	test/models/category_test.rb	/^class CategoryTest < ActiveSupport::TestCase$/;"	c
+CreateCategories	db/migrate/20150428074136_create_categories.rb	/^class CreateCategories < ActiveRecord::Migration$/;"	c
+CreateProducts	db/migrate/20150427144416_create_products.rb	/^class CreateProducts < ActiveRecord::Migration$/;"	c
+Product	app/models/product.rb	/^class Product < ActiveRecord::Base$/;"	c
+ProductTest	test/models/product_test.rb	/^class ProductTest < ActiveSupport::TestCase$/;"	c
+ProductUploader	app/uploaders/product_uploader.rb	/^class ProductUploader < CarrierWave::Uploader::Base$/;"	c
+ProductsControllerTest	test/controllers/products_controller_test.rb	/^class ProductsControllerTest < ActionController::TestCase$/;"	c
+ProductsHelper	app/helpers/products_helper.rb	/^module ProductsHelper$/;"	m
+StoreController	app/controllers/store_controller.rb	/^class StoreController < ApplicationController$/;"	c
+StoreControllerTest	test/controllers/store_controller_test.rb	/^class StoreControllerTest < ActionController::TestCase$/;"	c
+StoreHelper	app/helpers/store_helper.rb	/^module StoreHelper$/;"	m
+Toysshop	config/application.rb	/^module Toysshop$/;"	m
+authenticate	app/controllers/admin/products_controller.rb	/^  def authenticate$/;"	f	class:Admin
+category_params	app/controllers/admin/categories_controller.rb	/^    def category_params$/;"	f	class:Admin
+change	db/migrate/20150427144416_create_products.rb	/^  def change$/;"	f	class:CreateProducts
+change	db/migrate/20150428074136_create_categories.rb	/^  def change$/;"	f	class:CreateCategories
+change	db/migrate/20150505103309_add_category_ref_to_products.rb	/^  def change$/;"	f	class:AddCategoryRefToProducts
+create	app/controllers/admin/categories_controller.rb	/^  def create$/;"	f	class:Admin
+create	app/controllers/admin/products_controller.rb	/^  def create$/;"	f	class:Admin
+destroy	app/controllers/admin/categories_controller.rb	/^  def destroy$/;"	f	class:Admin
+destroy	app/controllers/admin/products_controller.rb	/^  def destroy$/;"	f	class:Admin
+edit	app/controllers/admin/categories_controller.rb	/^  def edit$/;"	f	class:Admin
+edit	app/controllers/admin/products_controller.rb	/^  def edit$/;"	f	class:Admin
+index	app/controllers/admin/categories_controller.rb	/^  def index$/;"	f	class:Admin
+index	app/controllers/admin/products_controller.rb	/^  def index$/;"	f	class:Admin
+new	app/controllers/admin/categories_controller.rb	/^  def new$/;"	f	class:Admin
+new	app/controllers/admin/products_controller.rb	/^  def new$/;"	f	class:Admin
+product_params	app/controllers/admin/products_controller.rb	/^    def product_params$/;"	f	class:Admin
+set_category	app/controllers/admin/categories_controller.rb	/^    def set_category$/;"	f	class:Admin
+set_product	app/controllers/admin/products_controller.rb	/^    def set_product$/;"	f	class:Admin
+show	app/controllers/admin/categories_controller.rb	/^  def show$/;"	f	class:Admin
+show	app/controllers/admin/products_controller.rb	/^  def show$/;"	f	class:Admin
+store_dir	app/uploaders/product_uploader.rb	/^  def store_dir$/;"	f	class:ProductUploader
+update	app/controllers/admin/categories_controller.rb	/^  def update$/;"	f	class:Admin
+update	app/controllers/admin/products_controller.rb	/^  def update$/;"	f	class:Admin

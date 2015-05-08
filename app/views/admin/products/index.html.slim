@@ -1,8 +1,8 @@
-= link_to 'Categories', admin_categories_path
-
 h1 Listing products
 
-table
+= link_to 'New Product', new_admin_product_path, class: 'btn btn-success'
+
+table class='table table-striped'
   thead
     tr
       th Image
@@ -11,21 +11,15 @@ table
       th Description
       th Price
       th
-      th
-      th
 
   tbody
     - @products.each do |product|
       tr
         td = image_tag(product.image_name_url(:thumb), alt: product.title)
-        td = product.title
-        td = product.category ? product.category.title : ''
+        td = link_to product.title, admin_product_path(product)
+        td = product.category ? (link_to product.category.title, admin_category_path(product.category_id)) : ''
         td = product.description
         td = sprintf("$%0.02f", product.price)
-        td = link_to 'Show', admin_product_path(product)
-        td = link_to 'Edit', edit_admin_product_path(product)
-        td = link_to 'Destroy', admin_product_path(product), data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Product', new_admin_product_path
+        td
+          => link_to 'Edit', edit_admin_product_path(product), class: 'btn btn-default'
+          => link_to 'Destroy', admin_product_path(product), data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
