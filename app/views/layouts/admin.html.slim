@@ -7,7 +7,8 @@ html
     = csrf_meta_tags
 
   body
-    .menu-top
-      == render "menu_top"
+    .navbar class='navbar-default navbar-fixed-to-top'
+      .container
+        = render "menu_top"
     .container
-      == yield
+      = yield
