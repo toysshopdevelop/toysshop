@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Toysshop - admin side
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    .menu-top
+      == render "menu_top"
+    .container
+      == yield
