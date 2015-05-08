@@ -1,9 +1,9 @@
 class Admin::CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
- layout "admin"
+  layout "admin"
 
- # GET /categories
+  # GET /categories
   # GET /categories.json
   def index
     @categories = Category.all
