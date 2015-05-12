@@ -1,8 +1,8 @@
 class Product < ActiveRecord::Base
-  validates :title, :description, :price, presence: true
+  validates :title, :article, :price, presence: true
   validates :price, numericality: { greater_than_or_equal_to: 0.01 }
   validates :image_name, allow_blank: true, format: {
-    with: %r{\.(jpg|png)},
+    with: /\.(jpg|png)/,
     message: ' must be .jpg or .png file'
   }
 
