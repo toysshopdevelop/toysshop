@@ -1,3 +1,10 @@
-=> link_to t('order.title_many'), admin_orders_path, class: "btn btn-default#{ controller.controller_name == 'orders' ? ' active' : '' } "
-=> link_to t('product.title_many'), admin_products_path, class: "btn btn-default#{ controller.controller_name == 'products' ? ' active' : '' } "
-=> link_to t('category.title_many'), admin_categories_path, class: "btn btn-default#{ controller.controller_name == 'categories' ? ' active' : '' } "
+.navbar class='navbar-default navbar-fixed-to-top'
+  .container
+    .collapse class='navbar-collapse'
+      ul class='nav navbar-nav'
+        li class="#{ active_class(:orders) }"
+          => link_to t('order.title_many'), admin_orders_path
+        li class="#{ active_class(:products) }"
+          => link_to t('product.title_many'), admin_products_path
+        li class="#{ active_class(:categories) }"
+          => link_to t('category.title_many'), admin_categories_path
