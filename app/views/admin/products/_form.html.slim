@@ -1,7 +1,7 @@
 = simple_form_for [:admin, @product], html: { class: 'form-horizontal' } do |f|
   => f.input :title, label: t('name')
-  => f.input :description, label: t('product.article')
-  => f.input :price, label: t('price'), placeholder: ' руб.'
+  => f.input :article, label: t('product.article')
+  => f.input :price, label: t('price'), placeholder: t('currency')
   => f.association :category, include_blank: false, label: t('category.title'), prompt: t('category.choise')
   => f.input :image_name, as: :file, label: t('image')
   p

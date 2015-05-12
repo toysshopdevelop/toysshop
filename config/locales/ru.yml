@@ -10,6 +10,7 @@ ru:
   image: 'Фото'
   save: 'Сохранить'
   create: 'Создать'
+  currency: 'руб.'
   category:
     title: 'Категория'
     title_many: 'Категории'
