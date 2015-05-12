@@ -1,6 +1,7 @@
-h1 Listing categories
+h1 = t('category.title')
+h2 = t('category.listing')
 
-= link_to 'New Category', new_admin_category_path, class: 'btn btn-success'
+= link_to t('category.new'), new_admin_category_path, class: 'btn btn-success'
 
 - unless @categories.empty?
   table class='table table-striped'
@@ -15,7 +16,7 @@ h1 Listing categories
           td
             => link_to category.title, admin_category_path(category), class: 'btn btn-link'
           td
-            => link_to 'Edit', edit_admin_category_path(category), class: 'btn btn-default'
-            => link_to 'Destroy', admin_category_path(category), data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
+            => link_to t('edit'), edit_admin_category_path(category), class: 'btn btn-default'
+            => link_to t('destroy'), admin_category_path(category), data: {:confirm => t('confirm') }, :method => :delete, class: 'btn btn-danger'
 - else
-  h2 No categories
+  h2 =t('categories.no')

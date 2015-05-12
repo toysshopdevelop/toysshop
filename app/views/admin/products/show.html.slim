@@ -1,18 +1,20 @@
 p#notice = notice
 
 p
-  strong Title:
+  = image_tag(@product.image_name_url(:large), alt: @product.title)
+p
+  strong =t('name')
+p
   = @product.title
 p
-  strong Description:
+  strong =t('product.article')
+p
   = @product.description
 p
-  strong Image name:
-  = image_tag(@product.image_name_url, alt: @product.title)
+  strong =t('price')
 p
-  strong Price:
-  = @product.price
+  = sprintf("%0.02f руб", @product.price)
 
-= link_to 'Edit', edit_admin_product_path(@product)
+=> link_to t('edit'), edit_admin_product_path(@product), class: 'btn btn-default'
 
-= link_to 'Back', admin_products_path
+=> link_to t('back'), admin_products_path,{ class: 'btn btn-default' }
