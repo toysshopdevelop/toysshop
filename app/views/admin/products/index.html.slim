@@ -1,16 +1,16 @@
-h1 Listing products
+h1 =t('product.listing')
 
-= link_to 'New Product', new_admin_product_path, class: 'btn btn-success'
+= link_to t('product.new'), new_admin_product_path, class: 'btn btn-success'
 
 - unless @products.empty?
   table class='table table-striped'
     thead
       tr
-        th Image
-        th Title
-        th Category
-        th Description
-        th Price
+        th
+        th =t('name')
+        th =t('category.title')
+        th =t('description')
+        th =t('price')
         th
     tbody
       - @products.each do |product|
@@ -21,7 +21,7 @@ h1 Listing products
           td = product.description
           td = sprintf("$%0.02f", product.price)
           td
-            => link_to 'Edit', edit_admin_product_path(product), class: 'btn btn-default'
-            => link_to 'Destroy', admin_product_path(product), data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
+            => link_to t('edit'), edit_admin_product_path(product), class: 'btn btn-default'
+            => link_to t('destroy'), admin_product_path(product), data: {:confirm => t('confirm') }, :method => :delete, class: 'btn btn-danger'
 - else
-  h2 No products
+  h2 =t('product.no')

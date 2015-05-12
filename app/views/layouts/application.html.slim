@@ -1,12 +1,10 @@
 doctype html
 html
   head
-    title Toysshop
+    title =t('title')
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
   body
-    div id="menu_top"
-      == render "menu_top"
     == yield
