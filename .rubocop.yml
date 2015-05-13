@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'log/**/*'
+    - 'Gemfile'
+    - 'config/initializers/simple_form.rb'
+    - 'config/initializers/simple_form_bootstrap.rb'
+Documentation:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 20
+Style/ClassAndModuleChildren:
+  Enabled: false

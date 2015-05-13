@@ -1,3 +1,2 @@
 class StoreController < ApplicationController
-
 end

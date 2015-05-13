@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'log/**/*'
+    - 'Gemfile'
+Documentation:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 20
