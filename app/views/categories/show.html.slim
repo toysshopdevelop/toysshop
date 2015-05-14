@@ -1,7 +1,8 @@
-- unless @products.empty?
-  - @products.each do |product|
-    = render 'product', product: product
-- else
-  h2 =t('product.no')
+.row
+  - unless @products.empty?
+    - @products.each do |product|
+      = render 'product', product: product
+  - else
+    h2 =t('product.no')
 
 = paginate @products
