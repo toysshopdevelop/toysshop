@@ -1,7 +1,7 @@
-h3 =t('new50')
-
 - unless @products.empty?
   - @products.each do |product|
-   = render 'product', product: product
+    = render 'product', product: product
 - else
   h2 =t('product.no')
+
+= paginate @products

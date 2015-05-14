@@ -1,2 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.cat-children {
+  padding-left: 15px;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+  font-size: 130%;
+  margin: 0 5px 0 5px;
+}
+
+.product {
+  margin-bottom: 5px;
+  height: 200px;
+}
