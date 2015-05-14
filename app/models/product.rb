@@ -9,4 +9,12 @@ class Product < ActiveRecord::Base
   belongs_to :category
 
   mount_uploader :image_name, ProductUploader
+
+  scope :for_category, lambda { |category|
+    Product.joins('INNER JOIN categories ON
+      products.category_id = categories.id')
+      .where('products.category_id = ? or
+         categories.parent_id = ?', category, category)
+      .group('products.id')
+  }
 end

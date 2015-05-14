@@ -11,6 +11,11 @@ ru:
   save: 'Сохранить'
   create: 'Создать'
   currency: 'руб.'
+  store: 'Магазин'
+  hello: 'Привет'
+  home: 'Главная'
+  new50: '50 последних добавленных'
+  buy: 'Купить'
   category:
     title: 'Категория'
     title_many: 'Категории'
@@ -28,6 +33,7 @@ ru:
     no: 'Нет товаров'
     edit: 'Редактирование товаров'
     article: 'Артикул'
+    from_category: 'Товары из категории'
   order:
     title: 'Заказ'
     title_many: 'Заказы'
@@ -35,3 +41,9 @@ ru:
     new: 'Создать заказ'
     no_new: 'Нет заказов'
     edit: 'Редактирование заказа'
+  views:
+    pagination:
+      previous: 'Предыдущая'
+      next: 'Следующая'
+      first: 'В начало'
+      last: 'В конец'

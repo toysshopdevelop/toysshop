@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     root 'orders#index'
   end
 
+  resources :categories
+
   root to: 'store#index', as: 'store'
 end

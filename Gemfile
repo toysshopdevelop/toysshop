@@ -40,6 +40,8 @@ gem 'rails-i18n', '~> 4.0.0'
 
 gem 'rubocop'
 
+gem 'kaminari'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

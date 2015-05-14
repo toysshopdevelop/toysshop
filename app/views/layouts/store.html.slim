@@ -7,4 +7,11 @@ html
     = csrf_meta_tags
 
   body
-    = yield
+    = render "user_menu_top"
+    .container
+      .col-md-3
+        .categories-tree
+          h3 =t('category.listing')
+          = render "category_listing"
+      .col-md-9
+        = yield
