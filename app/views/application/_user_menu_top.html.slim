@@ -4,3 +4,5 @@
       ul class='nav navbar-nav'
         li class="#{ active_class(:store) }"
           => link_to t('home'), store_path
+      .pull-right
+        = render 'search'

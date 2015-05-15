@@ -16,6 +16,9 @@ ru:
   home: 'Главная'
   new50: '50 последних добавленных'
   buy: 'Купить'
+  search: 'Поиск'
+  find: 'Искать'
+  text_for_search: 'Категория или товар'
   category:
     title: 'Категория'
     title_many: 'Категории'
