@@ -11,10 +11,16 @@ class Product < ActiveRecord::Base
   mount_uploader :image_name, ProductUploader
 
   scope :for_category, lambda { |category|
-    Product.joins('INNER JOIN categories ON
-      products.category_id = categories.id')
+    joins(:category)
       .where('products.category_id = ? or
          categories.parent_id = ?', category, category)
+      .group('products.id')
+  }
+
+  scope :search, lambda { |search|
+    joins(:category)
+      .where('products.title ILIKE ? or
+         categories.title ILIKE ?', "%#{search}%", "%#{search}%")
       .group('products.id')
   }
 end

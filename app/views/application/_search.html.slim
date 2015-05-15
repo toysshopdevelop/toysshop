@@ -1,0 +1,4 @@
+= simple_form_for '', url: search_path, method: 'get', html: { class: 'navbar-form navbar-left', role: 'search' } do |f|
+  .form-group
+    => f.input :search, class: 'form-control', input_html: { value: params[:search], placeholder: t('text_for_search') }, required: false, label: false
+  => f.submit t('search'), class: 'btn btn-success', name: nil

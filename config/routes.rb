@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :categories
 
   root to: 'store#index', as: 'store'
+
+  get 'search' => 'searches#index'
 end
