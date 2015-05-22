@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  padding-top: 70px;
+}
+
 .cat-children {
   padding-left: 15px;
 }
@@ -21,10 +25,7 @@
   display: none;
 }
 
-.cart-banner {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.search {
+#categories-tree {
+  position: fixed;
+  height: 100%;
 }
