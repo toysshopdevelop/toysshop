@@ -1,7 +1,6 @@
 h2 =t('buy_finish')
 
 = simple_form_for(@order) do |f|
-  = f.error_notification
   h3 =t('your_cart')
   table class='table table-stripped'
     tbody
@@ -37,9 +36,9 @@ h2 =t('buy_finish')
   .row
     .col-md-6
       .form-inputs
-        = f.input :name, label: t('user.name')
-        = f.input :adress, label: t('user.address')
-        = f.input :phone, label: t('user.phone'), placeholder: '84951112233'
+        = f.input :name, label: t('user.name'), required: true
+        = f.input :adress, label: t('user.address'), required: true
+        = f.input :phone, label: t('user.phone'), placeholder: '84951112233', required: true
         = f.input :email, label: t('user.email'), placeholder: 'email@domain.com'
 
   .form-actions
