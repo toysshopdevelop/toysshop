@@ -25,3 +25,5 @@ h1 =t('product.listing')
             => link_to t('destroy'), admin_product_path(product), data: {:confirm => t('confirm') }, :method => :delete, class: 'btn btn-danger'
 - else
   h2 =t('product.no')
+
+= paginate @products
