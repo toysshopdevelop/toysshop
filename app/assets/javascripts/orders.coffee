@@ -17,7 +17,7 @@ sum = ->
       val -= val*0.1
     else
       if val > 5000
-        $("#discount-sum").html((val*0.5).toFixed(2) + " руб.")
+        $("#discount-sum").html((val*0.05).toFixed(2) + " руб.")
         $("#discount").show()
         val -= val*0.05
       else

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :orders
+  resources :orders, only: [:new, :create, :destroy]
 
   get 'store/index'
 
