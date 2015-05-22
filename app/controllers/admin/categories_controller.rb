@@ -4,7 +4,7 @@ class Admin::CategoriesController < ApplicationController
   layout 'admin'
 
   def index
-    @categories = Category.all
+    @categories = Category.all.page(params[:page]).per(50)
   end
 
   def show
