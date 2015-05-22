@@ -7,7 +7,7 @@ class Product < ActiveRecord::Base
   }
 
   belongs_to :category
-
+  has_many :order_products
   mount_uploader :image_name, ProductUploader
 
   scope :for_category, lambda { |category|

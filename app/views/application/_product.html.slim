@@ -1,5 +1,5 @@
 .col-md-6 *{class: :product}
   =image_tag(product.image_name_url(:thumb), alt: product.title)
-  h4 =link_to product.title, store_path
+  h4 =product.title
   span class='price' =number_to_currency(product.price, locale: I18n.locale)
-  =link_to t('buy'), store_path, { class: 'btn btn-success' }
+  =link_to t('to_cart'), cart_path(product), method: :patch, remote: true, class: 'btn btn-success'
