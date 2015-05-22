@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :orders
+
   get 'store/index'
 
   namespace :admin do
@@ -11,4 +13,6 @@ Rails.application.routes.draw do
   root to: 'store#index', as: 'store'
 
   get 'search' => 'searches#index'
+
+  resources :carts, only: [:update, :show, :destroy]
 end

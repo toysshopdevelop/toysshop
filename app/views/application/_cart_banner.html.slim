@@ -1,0 +1,2 @@
+- if session[:cart] != nil
+  = link_to t('in_cart', count: session[:cart].length), new_order_path, class: 'btn btn-info'

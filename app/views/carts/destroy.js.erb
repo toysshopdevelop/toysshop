@@ -1,0 +1,6 @@
+$("#tr_product_id_<%= params[:id] %>").remove();
+$('#cart-banner').html('<%= j(render 'cart_banner') %>');
+Cart.sum();
+<% unless session[:cart] %>
+  Turbolinks.visit('/')
+<% end %>
