@@ -1,18 +1,36 @@
 h1 =t('order.listing')
 
 - unless @orders.blank?
-  table
-    thead
-      tr
-        th
-        th
-        th
-
+  table class='table table-striped'
     tbody
+      tr
+        th class='col-md-1' = t('order.id')
+        th class='col-md-3' = t('product.listing')
+        th class='col-md-5' = t('buyer_details')
+        th class='col-md-2' #{ t('order.sum') } / #{ t('discount.title') }
+        th class='col-md-1' = t('order.status')
       - @orders.each do |order|
-        tr
-          td = link_to t('show'), order
-          td = link_to t('edit'), edit_admin_order_path(order)
-          td = link_to t('destroy'), order, data: { :confirm => t('confirm') }, :method => :delete
+        tr class='order' id="order-id_#{ order.id }"
+          td = order.id
+          td
+            - order.order_products.each do |product|
+              => image_tag(product.image_name_url(:small), alt: product.title)
+              p #{ product.quantity } x #{link_to product.title, admin_product_path(product.product_id) } (#{ t('product.art') } : #{product.article})
+          td
+            p = order.name
+            p = order.phone
+            p = order.adress
+            p = order.email
+          td
+            p #{ t('order.sum') }: #{number_to_currency(order.sum, locale: I18n.locale) }
+            p #{ t('discount.title') }: #{ number_to_currency(order.discount, locale: I18n.locale) }
+            p #{ t('order_sum') }: #{ number_to_currency(order.total, locale: I18n.locale) }
+          td
+            p = order.closed? ? t('order.closed') : t('order.active')
+            - if !order.closed?
+              p => link_to t('order.close'), edit_admin_order_path(order), class: 'btn btn-success'
+            p => link_to t('destroy'), admin_order_path(order), data: { :confirm => t('confirm') }, method: :delete, remote: true, class: 'btn btn-danger'
 - else
   h2 =t('order.no_new')
+
+= paginate @orders

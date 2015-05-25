@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:destroy]
   layout 'store'
 
   def new
@@ -17,11 +16,6 @@ class OrdersController < ApplicationController
     else
       render :new
     end
-  end
-
-  def destroy
-    @order.destroy
-    redirect_to orders_url
   end
 
   private

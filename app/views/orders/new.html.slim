@@ -11,7 +11,7 @@ h2 =t('buy_finish')
             td = order_product.title
             td = number_to_currency(order_product.price, locale: I18n.locale)
             td
-              = p.input :quantity, collection: 1..10, selected: 1, label: false, input_html: { id: "product_#{order_product.product_id}", class: 'quantity', data: { price: order_product.price } }
+              = p.input :quantity, collection: 1..100, selected: 1, label: false, input_html: { id: "product_#{order_product.product_id}", class: 'quantity', data: { price: order_product.price } }
               = p.input :product_id, as: :hidden
             td
               = link_to image_tag('trash.png'), cart_path(order_product.product_id), method: :delete, remote: true
@@ -36,6 +36,7 @@ h2 =t('buy_finish')
   .row
     .col-md-6
       .form-inputs
+        = f.hidden_field :sum, id: 'order-sum-form'
         = f.input :name, label: t('user.name')
         = f.input :adress, label: t('user.address')
         = f.input :phone, label: t('user.phone'), placeholder: '84951112233'

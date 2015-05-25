@@ -23,6 +23,14 @@ sum = ->
       else
         $("#discount").hide()
   $("#order-sum").html(val.toFixed(2) + " руб.")
+  $("#order-sum-form").val(val.toFixed(2))
+
+sum2 = ->
+  val = 0
+  $(".order").each ->
+    $(".").each ->
+
+
 
 $(document).on 'page:change', ->
   sum()
