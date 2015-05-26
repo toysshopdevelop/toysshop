@@ -42,6 +42,8 @@ gem 'rubocop'
 
 gem 'kaminari'
 
+gem 'rack-ssl-enforcer'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
