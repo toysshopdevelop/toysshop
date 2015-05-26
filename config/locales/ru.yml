@@ -62,7 +62,6 @@ ru:
     from_category: 'Товары из категории'
   order:
     sum: 'Сумма'
-    status: 'Статус'
     id: 'Номер'
     title: 'Заказ'
     title_many: 'Заказы'
@@ -72,10 +71,11 @@ ru:
     edit: 'Редактирование заказа'
     confirm: 'Подтвердить заказ'
     created: 'Ваш заказ успешно оправлен в обратоку'
-    processed: 'В обработку'
+    status:
+      title: 'Статус'
+      closed: 'Закрыт'
+      active: 'Активный'
     close: 'Закрыть'
-    closed: 'Закрыт'
-    active: 'Активный'
     count:
       few: '%{count} заказа'
       many: '%{count} заказов'
@@ -87,3 +87,4 @@ ru:
       next: 'Следующая'
       first: 'В начало'
       last: 'В конец'
+

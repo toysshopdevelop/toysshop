@@ -13,8 +13,6 @@ class CartsController < ApplicationController
 
   def destroy
     session[:cart].delete(params[:id])
-    if session[:cart].empty?
-      session[:cart] = nil
-    end
+    session[:cart] = nil if session[:cart].empty?
   end
 end

@@ -8,7 +8,7 @@ h1 =t('order.listing')
         th class='col-md-3' = t('product.listing')
         th class='col-md-5' = t('buyer_details')
         th class='col-md-2' #{ t('order.sum') } / #{ t('discount.title') }
-        th class='col-md-1' = t('order.status')
+        th class='col-md-1' = t('order.status.title')
       - @orders.each do |order|
         tr class='order' id="order-id_#{ order.id }"
           td = order.id
@@ -26,7 +26,7 @@ h1 =t('order.listing')
             p #{ t('discount.title') }: #{ number_to_currency(order.discount, locale: I18n.locale) }
             p #{ t('order_sum') }: #{ number_to_currency(order.total, locale: I18n.locale) }
           td
-            p = order.closed? ? t('order.closed') : t('order.active')
+            p = t("order.status.#{ order.status }")
             - if !order.closed?
               p => link_to t('order.close'), edit_admin_order_path(order), class: 'btn btn-success'
             p => link_to t('destroy'), admin_order_path(order), data: { :confirm => t('confirm') }, method: :delete, remote: true, class: 'btn btn-danger'

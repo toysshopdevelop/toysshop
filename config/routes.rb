@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :categories, :products
-    resources :orders, only: [:index, :edit, :update, :destroy]
+    resources :orders, only: [:index, :edit, :destroy]
     root 'orders#index'
   end
 
