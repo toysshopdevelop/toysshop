@@ -3,7 +3,7 @@ class Admin::OrdersController < ApplicationController
   layout 'admin'
 
   def index
-    @orders = Order.order(status: :desc, created_at: :desc)
+    @orders = Order.order(status: :asc, created_at: :desc)
               .page(params[:page]).per(20)
   end
 

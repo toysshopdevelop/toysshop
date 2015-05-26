@@ -112,6 +112,7 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.6.0)
+    rack-ssl-enforcer (0.2.8)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.0)
@@ -221,6 +222,7 @@ DEPENDENCIES
   kaminari
   pg
   pry
+  rack-ssl-enforcer
   rails (= 4.2.0)
   rails-i18n (~> 4.0.0)
   rubocop
