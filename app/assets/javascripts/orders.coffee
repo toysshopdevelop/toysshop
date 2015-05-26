@@ -1,7 +1,3 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-
 sum = ->
   val = 0
   $(".quantity").each ->
@@ -23,6 +19,7 @@ sum = ->
       else
         $("#discount").hide()
   $("#order-sum").html(val.toFixed(2) + " руб.")
+  $("#order-sum-form").val(val.toFixed(2))
 
 $(document).on 'page:change', ->
   sum()

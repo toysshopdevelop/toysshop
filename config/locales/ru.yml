@@ -23,7 +23,7 @@ ru:
   in_cart:
     few: "В корзине %{count} товара"
     many: "В корзине %{count} товаров"
-    one: "В корзине 1 товар"
+    one: "В корзине %{count} товар"
     other: "В корзине %{count} товаров"
   buy_finish: 'Оформление покупки'
   continue_buying: 'Продолжить покупки'
@@ -58,8 +58,11 @@ ru:
     nothing: 'Нет товаров'
     edit: 'Редактирование товаров'
     article: 'Артикул'
+    art: 'Арт.'
     from_category: 'Товары из категории'
   order:
+    sum: 'Сумма'
+    id: 'Номер'
     title: 'Заказ'
     title_many: 'Заказы'
     listing: 'Список заказов'
@@ -68,9 +71,20 @@ ru:
     edit: 'Редактирование заказа'
     confirm: 'Подтвердить заказ'
     created: 'Ваш заказ успешно оправлен в обратоку'
+    status:
+      title: 'Статус'
+      closed: 'Закрыт'
+      active: 'Активный'
+    close: 'Закрыть'
+    count:
+      few: '%{count} заказа'
+      many: '%{count} заказов'
+      one: '%{count} заказ'
+      other: '%{count} заказов'
   views:
     pagination:
       previous: 'Предыдущая'
       next: 'Следующая'
       first: 'В начало'
       last: 'В конец'
+
