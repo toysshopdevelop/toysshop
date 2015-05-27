@@ -1,13 +1,10 @@
-class Admin::CategoriesController < ApplicationController
+class Admin::CategoriesController < AdminController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   layout 'admin'
 
   def index
     @categories = Category.all.page(params[:page]).per(50)
-  end
-
-  def show
   end
 
   def new

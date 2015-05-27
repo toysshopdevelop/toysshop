@@ -1,4 +1,4 @@
-class Admin::OrdersController < ApplicationController
+class Admin::OrdersController < AdminController
   before_action :set_order, only: [:edit, :destroy]
 
   layout 'admin'
