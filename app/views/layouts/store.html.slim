@@ -11,8 +11,7 @@ html
     .container
       .col-md-3
         .categories-tree id='categories-tree'
-          h3 =t('category.listing')
           = render "category_listing"
-      .col-md-9
+      .col-md-9 class='field'
         = render 'flash_messages'
         = yield
