@@ -1,6 +1,5 @@
 class Admin::OrdersController < ApplicationController
   before_action :set_order, only: [:edit, :destroy]
-  before_filter :authenticate
 
   layout 'admin'
 
@@ -26,13 +25,5 @@ class Admin::OrdersController < ApplicationController
 
   def set_params
     params.require(:order).permit!
-  end
-
-  protected
-
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-      username == 'admin' && password == 'password'
-    end
   end
 end

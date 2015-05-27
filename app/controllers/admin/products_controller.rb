@@ -1,6 +1,5 @@
 class Admin::ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate
 
   layout 'admin'
 
@@ -49,13 +48,5 @@ class Admin::ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit!
-  end
-
-  protected
-
-  def authenticate
-    authenticate_or_request_with_http_basic do |username, password|
-      username == 'admin' && password == 'password'
-    end
   end
 end
