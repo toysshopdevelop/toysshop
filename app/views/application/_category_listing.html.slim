@@ -1,3 +1,4 @@
+h3 =t('category.listing')
 ul class='nav nav-pills nav-stacked'
   - categories_group[nil].each do |c|
     li role='presentation' = link_to c.title, category_path(c)

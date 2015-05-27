@@ -1,5 +1,6 @@
 class Admin::OrdersController < ApplicationController
   before_action :set_order, only: [:edit, :destroy]
+
   layout 'admin'
 
   def index
