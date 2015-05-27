@@ -44,6 +44,8 @@ gem 'kaminari'
 
 gem 'rack-ssl-enforcer'
 
+gem 'lazybox'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
