@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+//= require lazybox
+
+$(document).ready(function() {
+  $('a[rel*=lazybox]').lazybox();
+  // or with options
+  // $('a[rel*=lazybox]').lazybox({esc: true, close: true, modal: true});
+});
