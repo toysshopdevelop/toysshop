@@ -3,9 +3,7 @@
     .navbar-header id='logo'
       = link_to image_tag('logo.png'), store_path
     .collapse class='navbar-collapse'
-      p class='navbar-text' == t('address')
       ul class='nav navbar-nav navbar-right'
         li id='cart-banner'
-          - if session[:cart] != nil
-            = render 'cart_banner'
+          = render 'cart_banner'
         li = render 'search'

@@ -24,6 +24,33 @@ body {
   border-color: #FFFFFF;
 }
 
+.top-info {
+  text-align: center;
+}
+
+div.info-group {
+  background: #FFFFFF;
+  height: 130px;
+  padding: 10px;
+  margin: 0px 10px 20px 20px;
+  border: 1px solid #BEBEBE;
+  box-shadow: 0px 8px 8px 1px #CAC6C6;
+  width: 302px;
+}
+
+.info-title p {
+  font-weight: bold;
+  color: #002C45;
+  font-size: 120%;
+  border-bottom: 2px solid #F8D202;
+  margin-bottom: 5px;
+}
+
+.info p {
+  color: #0066B0;
+  font-weight: bold;
+}
+
 #lazy_overlay {
   z-index: 10000;
 }
@@ -43,7 +70,8 @@ body {
 }
 
 .lazy-img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 90vh;
 }
 
 .product_title {
