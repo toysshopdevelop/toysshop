@@ -1,2 +1,8 @@
-- if session[:cart] != nil
-  = link_to t('in_cart', count: session[:cart].length), new_order_path, class: 'btn btn-info'
+- if session[:cart].blank?
+  = link_to store_path, class: 'btn btn-info' do
+    => t('empty_cart')
+    = image_tag('cart_empty.png')
+- else
+  = link_to new_order_path, class: 'btn btn-info'
+    => t('in_cart', count: session[:cart].length)
+    = image_tag('cart_full.png')
