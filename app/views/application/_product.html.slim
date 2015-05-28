@@ -1,5 +1,10 @@
-.col-md-6 *{class: :product}
-  =link_to image_tag(product.image_name_url(:thumb), alt: product.title), product.image_name_url(:large), rel: :lazybox
-  h4 =product.title
-  span class='price' =number_to_currency(product.price, locale: I18n.locale)
-  =link_to t('to_cart'), cart_path(product), method: :patch, remote: true, class: 'btn btn-success'
+.col-md-5 class='product'
+  =link_to image_tag(product.image_name_url(:medium), alt: product.title), product.image_name_url(:large), rel: :lazybox
+  .buy
+    p class='product_title'
+      =product.title
+    .to_cart
+      =link_to t('to_cart'), cart_path(product), method: :patch, remote: true, class: 'btn btn-success'
+    .product_price
+      =number_to_currency(product.price, locale: I18n.locale)
+

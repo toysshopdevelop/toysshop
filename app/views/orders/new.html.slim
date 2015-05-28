@@ -7,24 +7,26 @@ h2 =t('buy_finish')
       - @order.order_products.each do |order_product|
         = f.simple_fields_for :order_products, order_product do |p|
           tr id="tr_product_id_#{ order_product.product_id }"
-            td = image_tag(order_product.image_name_url(:thumb), alt: order_product.title)
-            td = order_product.title
-            td = number_to_currency(order_product.price, locale: I18n.locale)
-            td
+            td class='col-md-2' = link_to image_tag(order_product.image_name_url(:thumb), alt: order_product.title), order_product.image_name_url(:large), rel: :lazybox
+            td class='col-md-4' = order_product.title
+            td class='col-md-2' = number_to_currency(order_product.price, locale: I18n.locale)
+            td class='col-md-2'
               = p.input :quantity, collection: 1..100, selected: 1, label: false, input_html: { id: "product_#{order_product.product_id}", class: 'quantity', data: { price: order_product.price } }
               = p.input :product_id, as: :hidden
-            td
+            td class='col-md-1'
               = link_to image_tag('trash.png'), cart_path(order_product.product_id), method: :delete, remote: true
       tr id='discount'
         td
-        td
-        td = t('discount.title')
+        td class='sum' = t('discount.title')
         td id='discount-sum'
+        td
+        td
       tr
         td
-        td
-        td = t('order_sum')
+        td class='sum' = t('order_sum')
         td id='order-sum'
+        td
+        td
 
   h4 =t('discount.active')
   ul

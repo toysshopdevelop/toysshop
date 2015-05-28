@@ -1,8 +1,8 @@
 h3 =t('category.listing')
 ul class='nav nav-pills nav-stacked'
   - categories_group[nil].each do |c|
-    li role='presentation' = link_to c.title, category_path(c)
+    li class="#{ active_category(c.id) }" role='presentation' = link_to c.title, category_path(c)
     ul class='nav nav-pills nav-stacked'
       - if categories_group[c.id].present?
         - categories_group[c.id].each do |category|
-          li role='presentation' class='cat-children' = link_to category.title, category_path(category)
+          li class='cat-children' role='presentation' class="#{ active_category(category.id) }" = link_to category.title, category_path(category)
