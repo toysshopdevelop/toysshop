@@ -1,5 +1,6 @@
 ru:
   confirm: 'Вы уверены?'
+  date: 'Дата'
   edit: 'Изменить'
   destroy: 'Удалить'
   back: 'Назад'

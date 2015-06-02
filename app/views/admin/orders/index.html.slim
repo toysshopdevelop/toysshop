@@ -4,14 +4,16 @@ h1 =t('order.listing')
   table class='table table-striped'
     tbody
       tr
-        th class='col-md-1' = t('order.id')
+        th class='col-md-1' #{ t('order.id') } / #{ t('date') }
         th class='col-md-3' = t('product.listing')
         th class='col-md-5' = t('buyer_details')
         th class='col-md-2' #{ t('order.sum') } / #{ t('discount.title') }
         th class='col-md-1' = t('order.status.title')
       - @orders.each do |order|
         tr class='order' id="order-id_#{ order.id }"
-          td = order.id
+          td
+            p = order.id
+            p = order.created_at.strftime('%d.%m.%Y')
           td
             - order.order_products.each do |product|
               => image_tag(product.image_name_url(:small), alt: product.title)
