@@ -2,6 +2,10 @@
 @import "bootstrap";
 @import "lazybox";
 
+.hidden {
+  display: none;
+}
+
 body {
   padding-top: 70px;
   margin-bottom: 30px;
@@ -97,10 +101,6 @@ div.info-group {
 
 .to_cart {
   float: right;
-}
-
-#discount {
-  display: none;
 }
 
 td.sum {

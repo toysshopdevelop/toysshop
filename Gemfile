@@ -56,12 +56,14 @@ gem 'lazybox'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'rspec-rails', '~> 3.2.1'
+  gem 'capybara', '~> 2.4.4'
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'database_cleaner', '~> 1.4.1'
+  gem 'launchy', '~> 2.4.3'
+  gem 'selenium-webdriver', '~> 2.45.0'
+  gem 'rack_session_access'
 end
