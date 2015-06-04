@@ -1,50 +1,51 @@
-h2 =t('buy_finish')
+- if session[:cart].nil?
+  h2 = t('empty_cart')
+  => link_to t('continue_buying'), store_path, class: 'btn btn-warning'
+- else
+  h2 =t('buy_finish')
+  = simple_form_for(@order) do |f|
+    h3 =t('your_cart')
+    table class='table table-stripped'
+      tbody
+        - @order.order_products.each do |order_product|
+          = f.simple_fields_for :order_products, order_product do |p|
+            tr id="tr_product_id_#{ order_product.product_id }"
+              td class='col-md-2' = link_to image_tag(order_product.image_name_url(:thumb), alt: order_product.title), order_product.image_name_url(:large), rel: :lazybox
+              td class='col-md-4' = order_product.title
+              td class='col-md-2' = number_to_currency(order_product.price, locale: I18n.locale)
+              td class='col-md-2'
+                = p.input :quantity, collection: 1..100, selected: 1, label: false, input_html: { id: "select_product_#{order_product.product_id}", class: 'quantity', data: { price: order_product.price } }
+                = p.input :product_id, class: 'product_id', as: :hidden
+              td class='col-md-1'
+                = link_to image_tag('trash.png'), cart_path(order_product.product_id), method: :delete, remote: true, id: "delete_product_#{order_product.product_id}"
+        tr id='discount'
+          td
+          td class='sum' = t('discount.title')
+          td id='discount-sum'
+          td
+          td
+        tr
+          td
+          td class='sum' = t('order_sum')
+          td id='order-sum'
+          td
+          td
 
-= simple_form_for(@order) do |f|
-  h3 =t('your_cart')
-  table class='table table-stripped'
-    tbody
-      - @order.order_products.each do |order_product|
-        = f.simple_fields_for :order_products, order_product do |p|
-          tr id="tr_product_id_#{ order_product.product_id }"
-            td class='col-md-2' = link_to image_tag(order_product.image_name_url(:thumb), alt: order_product.title), order_product.image_name_url(:large), rel: :lazybox
-            td class='col-md-4' = order_product.title
-            td class='col-md-2' = number_to_currency(order_product.price, locale: I18n.locale)
-            td class='col-md-2'
-              = p.input :quantity, collection: 1..100, selected: 1, label: false, input_html: { id: "product_#{order_product.product_id}", class: 'quantity', data: { price: order_product.price } }
-              = p.input :product_id, as: :hidden
-            td class='col-md-1'
-              = link_to image_tag('trash.png'), cart_path(order_product.product_id), method: :delete, remote: true
-      tr id='discount'
-        td
-        td class='sum' = t('discount.title')
-        td id='discount-sum'
-        td
-        td
-      tr
-        td
-        td class='sum' = t('order_sum')
-        td id='order-sum'
-        td
-        td
+    h4 =t('discount.active')
+    ul
+      li =t('discount.sum5')
+      li =t('discount.sum10')
+      li =t('discount.sum15')
 
-  h4 =t('discount.active')
-  ul
-    li =t('discount.sum5')
-    li =t('discount.sum10')
-    li =t('discount.sum15')
+    h3 =t('buyer_details')
+    .row
+      .col-md-6
+        .form-inputs
+          = f.hidden_field :sum, id: 'order-sum-form'
+          = f.input :name, label: t('user.name')
+          = f.input :adress, label: t('user.address')
+          = f.input :phone, label: t('user.phone'), placeholder: '84951112233'
+          = f.input :email, label: t('user.email'), placeholder: 'email@domain.com'
 
-  h3 =t('buyer_details')
-  .row
-    .col-md-6
-      .form-inputs
-        = f.hidden_field :sum, id: 'order-sum-form'
-        = f.input :name, label: t('user.name')
-        = f.input :adress, label: t('user.address')
-        = f.input :phone, label: t('user.phone'), placeholder: '84951112233'
-        = f.input :email, label: t('user.email'), placeholder: 'email@domain.com'
-
-  .form-actions
-    => f.submit t('order.confirm'), class: 'btn btn-success'
-p
-=> link_to t('continue_buying'), store_path, class: 'btn btn-warning'
+    .form-actions
+      => f.submit t('order.confirm'), class: 'btn btn-success'
