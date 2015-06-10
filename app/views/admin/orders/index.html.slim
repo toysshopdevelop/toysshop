@@ -25,8 +25,6 @@ h1 =t('order.listing')
             p = order.email
           td
             p #{ t('order.sum') }: #{number_to_currency(order.sum, locale: I18n.locale) }
-            p #{ t('discount.title') }: #{ number_to_currency(order.discount, locale: I18n.locale) }
-            p #{ t('order_sum') }: #{ number_to_currency(order.total, locale: I18n.locale) }
           td
             p = t("order.status.#{ order.status }")
             - if !order.closed?

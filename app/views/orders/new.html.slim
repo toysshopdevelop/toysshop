@@ -12,30 +12,18 @@
             tr id="tr_product_id_#{ order_product.product_id }"
               td class='col-md-2' = link_to image_tag(order_product.image_name_url(:thumb), alt: order_product.title), order_product.image_name_url(:large), rel: :lazybox
               td class='col-md-4' = order_product.title
-              td class='col-md-2' = number_to_currency(order_product.price, locale: I18n.locale)
+              td class='col-md-2 right' = number_to_currency(order_product.price, locale: I18n.locale)
               td class='col-md-2'
                 = p.input :quantity, collection: 1..100, selected: 1, label: false, input_html: { id: "select_product_#{order_product.product_id}", class: 'quantity', data: { price: order_product.price } }
                 = p.input :product_id, class: 'product_id', as: :hidden
               td class='col-md-1'
                 = link_to image_tag('trash.png'), cart_path(order_product.product_id), method: :delete, remote: true, id: "delete_product_#{order_product.product_id}"
-        tr id='discount'
-          td
-          td class='sum' = t('discount.title')
-          td id='discount-sum'
-          td
-          td
         tr
           td
           td class='sum' = t('order_sum')
-          td id='order-sum'
+          td id='order-sum' class='right'
           td
           td
-
-    h4 =t('discount.active')
-    ul
-      li =t('discount.sum5')
-      li =t('discount.sum10')
-      li =t('discount.sum15')
 
     h3 =t('buyer_details')
     .row
