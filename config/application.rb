@@ -9,5 +9,6 @@ module Toysshop
     config.i18n.default_locale = :ru
     config.active_record.raise_in_transactional_callbacks = true
     config.middleware.use Rack::SslEnforcer, only_environments: 'production'
+    config.action_mailer.default_url_options = {host: 'https://toysshop.herokuapp.com'}
   end
 end

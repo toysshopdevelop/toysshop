@@ -111,6 +111,8 @@ GEM
     launchy (2.4.3)
       addressable (~> 2.3)
     lazybox (1.1.5)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -274,6 +276,7 @@ DEPENDENCIES
   kaminari
   launchy (~> 2.4.3)
   lazybox
+  letter_opener
   pg
   pry
   rack-ssl-enforcer
