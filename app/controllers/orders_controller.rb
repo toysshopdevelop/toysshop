@@ -12,8 +12,8 @@ class OrdersController < ApplicationController
     if @order.save
       flash[:success] = t('order.created')
       session[:cart] = nil
-      Notification.order_notification.deliver_now
       redirect_to store_path
+      Notification.order_notification.deliver_now
     else
       render :new
     end
