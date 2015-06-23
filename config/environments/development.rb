@@ -5,16 +5,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   # open letters in browser instead of sending it
-  # config.action_mailer.delivery_method = :letter_opener
-
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'gmail.com',
-    user_name:            'toysshop.develop',
-    password:             'qweasdzxc987',
-    authentication:       'plain',
-    enable_starttls_auto: true  }
+  config.action_mailer.delivery_method = :letter_opener
 
   # Do not eager load code on boot.
   config.eager_load = false
