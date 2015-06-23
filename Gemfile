@@ -66,4 +66,5 @@ group :development, :test do
   gem 'launchy', '~> 2.4.3'
   gem 'selenium-webdriver', '~> 2.45.0'
   gem 'rack_session_access'
+  gem 'letter_opener'
 end
