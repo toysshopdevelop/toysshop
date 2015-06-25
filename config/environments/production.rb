@@ -13,13 +13,13 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'gmail.com',
-    user_name:            'toysshop.develop',
-    password:             ENV['GMAIL_PASS'],
-    authentication:       'plain',
-    enable_starttls_auto: true  }
+    address: 'smtp.mandrillapp.com',
+    port: 587,
+    enable_starttls_auto: true,
+    password: ENV['MAIL_PASS'],
+    authentication: 'login',
+    domain: 'gmail.com'
+  }
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.

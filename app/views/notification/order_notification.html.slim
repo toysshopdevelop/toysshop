@@ -4,7 +4,7 @@ html
     title =t('title')
   body
     h2
-      = t('notification.info')
+      = t('notification.number') + @number.to_s
     h3
       => t('notification.link')
       => link_to t('order.title_many'), admin_orders_url

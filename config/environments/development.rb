@@ -7,6 +7,8 @@ Rails.application.configure do
   # open letters in browser instead of sending it
   config.action_mailer.delivery_method = :letter_opener
 
+  config.action_mailer.raise_delivery_errors = true
+
   # Do not eager load code on boot.
   config.eager_load = false
 
