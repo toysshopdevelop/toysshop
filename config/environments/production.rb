@@ -17,6 +17,7 @@ Rails.application.configure do
     port: 587,
     enable_starttls_auto: true,
     password: ENV['MAIL_PASS'],
+    user_name: 'toysshop.develop@gmail.com',
     authentication: 'login',
     domain: 'gmail.com'
   }
